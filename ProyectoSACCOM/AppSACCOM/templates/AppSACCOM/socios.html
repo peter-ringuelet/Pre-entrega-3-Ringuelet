@@ -1,5 +1,21 @@
 {% extends "AppSACCOM/padre.html" %}
 {% load static %}
 {% block contenidoQueCambia%}
-    <h1>Socios</h1>
+    {% if miFormulario.errors %} 
+    
+    <p style="color: red;"> Estan mal los datos, revisalos</p>
+    
+    {% endif %}
+
+    <form action="" method="post">{% csrf_token %}
+        <!-- Aca esta la magia de Django-->
+        <table>
+
+            {{ miFormulario.as_table }}
+
+        </table>
+
+        <input type="submit", value="Enviar">
+        
+     </form>   
 {% endblock %}

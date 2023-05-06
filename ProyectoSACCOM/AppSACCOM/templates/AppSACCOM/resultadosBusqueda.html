@@ -1,20 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario - Actividades</title>
-</head>
-<body>
+{% extends "AppSACCOM/padre.html" %}
+{% load static %}
+{% block contenidoQueCambia%}
      <p> Estamos buscando la Actividad: {{nombre}}</p>
      {% if actividades %} 
      <ul>
-     {% for nombre in actividades %} 
+     {% for actividad in actividades %} 
          <li>{{actividad.nombre}}</li>
-         <li>{{actividad.fecha}}</li>
+         <li>{{actividad.fecha_inicio}}</li>
      {% endfor %}
      </ul>
      {% endif %}
-</body>
-</html>
+{% endblock %}

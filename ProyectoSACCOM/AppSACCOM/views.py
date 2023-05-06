@@ -4,20 +4,8 @@ from AppSACCOM.models import *
 from AppSACCOM.forms import *
 
 # Create your views here.
-def inicio(request):
-    return render(request, "AppSACCOM/inicio.html")
 
-def comision_directiva(request):
-    return render(request, "AppSACCOM/comision.html")
-
-def socios(request):
-    return render(request, "AppSACCOM/socios.html")
-
-def actividades(request):
-    return render(request, "AppSACCOM/actividades.html")
-
-
-def actividadFormulario(request):
+def actividad(request):
  
       if request.method == "POST":
  
@@ -32,10 +20,10 @@ def actividadFormulario(request):
       else:
             miFormulario = ActividadFormulario()
  
-      return render(request, "AppSACCOM/actividadFormulario.html", {"miFormulario": miFormulario})
+      return render(request, "AppSACCOM/actividades.html", {"miFormulario": miFormulario})
 
 
-def comisionFormulario(request):
+def comision(request):
  
       if request.method == "POST":
  
@@ -50,10 +38,10 @@ def comisionFormulario(request):
       else:
             miFormulario = ComisionFormulario()
  
-      return render(request, "AppSACCOM/comisionFormulario.html", {"miFormulario": miFormulario})
+      return render(request, "AppSACCOM/comision.html", {"miFormulario": miFormulario})
 
 
-def socioFormulario(request):
+def socio(request):
  
       if request.method == "POST":
  
@@ -68,11 +56,11 @@ def socioFormulario(request):
       else:
             miFormulario = SocioFormulario()
  
-      return render(request, "AppSACCOM/socioFormulario.html", {"miFormulario": miFormulario})
+      return render(request, "AppSACCOM/socios.html", {"miFormulario": miFormulario})
 
 
-def busquedaActividad(request):
-      return render(request, "AppSACCOM/busquedaActividad.html")
+def inicio(request):
+      return render(request, "AppSACCOM/inicio.html")
 
 def buscar(request):
       if request.GET['nombre']:
