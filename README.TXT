@@ -1,0 +1,1 @@
+Segui los mismos pasos que en las clases, funciona como el programa que mostraron en el video de explicacion de la Pre-entrega
