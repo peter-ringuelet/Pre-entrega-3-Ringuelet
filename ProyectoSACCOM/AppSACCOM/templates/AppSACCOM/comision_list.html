@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Comision Directiva</h1>
+    <ul>
+        {% for comision in object_list %}
+            <li>
+                <p>  {{comision.apellido}} {{ comision.nombre }}</p>
+                <p>
+                    <a href="{% url 'ComisionDetail' comision.id %}">Ver</a>
+                    <a href="{% url 'ComisionEdit' comision.id %}">Editar</a>
+                    <a href="{% url 'ComisionDelete' comision.id %}">Borrar</a>
+                </p>
+            </li>
+        {% endfor %}
+    </ul>
+    
+</body>
+</html>

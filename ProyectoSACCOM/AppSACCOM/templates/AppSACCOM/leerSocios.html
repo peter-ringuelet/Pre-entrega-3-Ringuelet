@@ -1,0 +1,15 @@
+{% extends "AppSACCOM/padre.html" %}
+{% load static %}
+{% block contenidoQueCambia%}
+
+    {% for s in socios %}
+        <li>{{s}}</li>
+        <button>
+            <a href= "{% url 'EliminarSocio' s.dni %}"> Eliminar</a>
+            <a href="{% url 'EditarSocio' s.dni %}">Editar</a>
+        </button>
+    {% endfor %}
+    <br>
+    <a href="{% url 'Socios' %}">Agregar otro socio</a>
+
+{% endblock %}

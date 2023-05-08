@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p>Nombre: <i>{{ comision.nombre }}</i></p>
+    <p>Apellido: <i>{{ comision.apellido }}</i></p>
+    <p>DNI: <i>{{ comision.dni }}</i></p>
+    <p>Cargo: <i>{{ comision.cargo }}</i></p>
+    <p>
+        <a href="{%url 'ComisionList' %}">Regresar</a>
+    </p>
+</body>
+</html>
